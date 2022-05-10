@@ -23,14 +23,14 @@ The `db` container has 3 volumes -
 
 2. `mysqldumps/backup.sql.gz` - This is a snapshot taken from the production instance via mysqldump, place the file in this location and it will get imported on the first run of the container automatically.
 
-3. `init/migrate.sh` - A URL migration script, this updates the URL stored in the database, this also gets run automatically when the containers are spun up for the first time.
+3. `init/migrate.sh` - A URL migration script, this updates the URL stored in the database, this also gets run automatically when the containers are spun up for the first time. Note, some containers do not automatically allow access to the script, this may have to be manually run, see below. Also, for first time use, it may be preferable to manually run the queries on the script individually to ensure only desired data is changed.
 
 ## Usage
 1. Clone or download this project.
 
 2. Create a mysqldump from your pre-existing site and place in location: `mysqldumps/backup.sql.gz` (ensure file is named `backup.sql.gz`)
 
-3. Obtain copy of `wp-content` folder from pre-existing site and place in location: `site/wp-content`
+3. Obtain copy of `wp-content` folder from pre-existing site and place in location: `site/wp-content`. The wordpress image will automatically fill in the rest of the wordpress core files.
 
 4. Enter your configuration variables into `.env`.
 

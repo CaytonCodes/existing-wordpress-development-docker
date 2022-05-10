@@ -1,0 +1,4 @@
+site/*
+mysqldumps/backup.sql.gz
+database/*
+.DS_Store

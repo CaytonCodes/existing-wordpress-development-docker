@@ -45,5 +45,9 @@ The `db` container has 3 volumes -
 
     This will update the database with the new URL. Note you may have to manually run the queries in this script individually depending on your database.
 
+7. When the container is NOT running, you can update to the latest wordpress version by running:
+
+    `docker pull wordpress:latest`
+
 
 The website will then be available at `http://localhost` and the WordPress dashboard at `http://localhost/wp-admin`.
